@@ -1,1 +1,1 @@
-console.log('main branch and created new file');
+alert('main branch and created new file');
