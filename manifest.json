@@ -1,0 +1,34 @@
+{
+  "author": "appsaeed7@gmai.com",
+  "description": "Awesome Saveing time extension for save time and easy to access any website with one click",
+  "icons": {
+    "128": "img/icon-128.png",
+    "16": "img/icon-16.png"
+  },
+  "manifest_version": 3,
+  "name": "Awesome Saveing Time",
+  "version": "1.0.1",
+  "action": {
+    "default_icon": "./img/icon-128.png",
+    "default_popup": "./popup.html",
+    "default_title": "Awesome Saveing Time"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["./lib/jquery.js", "./fontend/content.js"],
+      "css": ["./fontend/style.css"],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "ftp://*/*",
+        "file:///*",
+        "https://www.fiverr.com/*",
+        "http://www.fiverr.com/*",
+        "https://www.youtube.com/*",
+        "http://www.youtube.com/*"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
